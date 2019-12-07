@@ -1,0 +1,102 @@
+from django.db import models
+
+from django.utils.translation import gettext as_
+
+class Squirrel(models.model):
+    Latitude=models.FloatField(
+            help_text=_('Latitude of sighting'),
+            )
+    Longtitude=models.FloatField(
+            help_text=_('Longtitude of sighting'),
+            ) 
+    ID=models.CharField(
+            max_length=100,
+            help_text=_('Uniqueid of sighting'),
+            )
+    AM='AM'
+    pm='PM'
+    
+    SHIFT_CHOICES=(
+            (AM,'AM'),
+            (PM,'PM'),
+            )
+    shift=models.CharField(
+            max_length=3,
+            choices=SHIFT_CHOICES,
+            )
+    Date=models.DateField(
+            help_text=_('sighting day'),
+            )
+
+    Adult='Adult'
+    Juvenile='Juvenile'
+    ?='?'
+    AGE_CHOICES=(
+            (Adult,'Adult'),
+            (Juvenile,'Juvenile'),
+            (?,'?'),
+            )
+
+    Age=models.CharField(
+            max_length=10,
+            choices=AGE_CHOICES,
+            )
+
+    Gray='Gray'
+    Cinnamon='Cinnamon'
+    Black='Black'
+    FUR_COLOR_CHOICES=(
+            (Gray,'Gray'),
+            (Cinnamon,'Cinnamon'),
+            (Black,'Black'),
+            )
+    Primary_Fur_Color=models.CharField(
+            max_length=30,
+            choices=FUR_COLOR_CHOICES,
+            )
+
+    Ground_Plane='Ground Plane'
+    Above_Ground='Above Ground'
+    LOCATION_CHOICES(
+            (Ground_Plane,'Ground_Plane'),
+            (Above_Ground,'Above_Ground'),
+            )
+    LOCATION=models.CharField(
+            max_length=30,
+            choices=LOCATION_CHOICES,
+            )
+
+    Specific_location=models.CharField(
+            max_length=100,
+            )
+
+    Running=models.BooleanField()
+
+    Chasing=models.BooleanField()
+
+    Climbing=models.BooleanField()
+
+    Eating=models.BooleanField()
+
+    Foraging=models.BooleanField()
+
+    Other_Activities=models.CharField(
+            max_length=100,
+            )
+
+    Kuks=models.BooleanField()
+
+    Quaas=models.BooleanField()
+
+    Moans=models.BooleanField()
+
+    Tail_flags=models.BooleanField()
+
+    Tail_twitches=models.BooleanField()
+
+    Approaches=models.BooleanField()
+
+    Indifferent=models.BooleanField()
+
+    Runs_form=models.BooleanField()
+# Create your models here.
