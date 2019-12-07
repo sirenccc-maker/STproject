@@ -12,7 +12,7 @@ def all_squirrel(request):
     return render(request,'ST/all.html',context)
 
 def edit_squirrel(request,squirrel_id):
-    squirrel=Squirrel.object.get(Squirrel_ID=squirrel_id)
+    squirrel=Squirrel.objects.get(Squirrel_ID=squirrel_id)
     if request.method == 'POST':
         form=SquirrelForm(request.POST,instance=squirrel)
         if form.is_valid():
