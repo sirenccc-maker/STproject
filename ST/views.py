@@ -30,7 +30,7 @@ def add_squirrel(request):
         form=SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'ST/sightings')
+            return redirect(f'/ST/sightings')
 
     else:
         form = SquirrelForm()
