@@ -1,7 +1,7 @@
-from django.form import ModelForm
- from .models import Squirrel
+from django.forms import ModelForm
+from .models import Squirrel
 
-Class SquirrelForm(ModelForm):
+class SquirrelForm(ModelForm):
 	class Meta:
 		model=Squirrel
-		fields=‘__all__’
+		fields='__all__'
