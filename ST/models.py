@@ -1,20 +1,20 @@
 from django.db import models
 
-from django.utils.translation import gettext as_
+from django.utils.translation import gettext as _
 
-class Squirrel(models.model):
+class Squirrel(models.Model):
     Latitude=models.FloatField(
             help_text=_('Latitude of sighting'),
             )
     Longtitude=models.FloatField(
             help_text=_('Longtitude of sighting'),
             ) 
-    ID=models.CharField(
+    Squirrel_ID=models.CharField(
             max_length=100,
             help_text=_('Uniqueid of sighting'),
             )
     AM='AM'
-    pm='PM'
+    PM='PM'
     
     SHIFT_CHOICES=(
             (AM,'AM'),
@@ -30,11 +30,11 @@ class Squirrel(models.model):
 
     Adult='Adult'
     Juvenile='Juvenile'
-    ?='?'
+    Question_mark='?'
     AGE_CHOICES=(
             (Adult,'Adult'),
             (Juvenile,'Juvenile'),
-            (?,'?'),
+            (Question_mark,'?'),
             )
 
     Age=models.CharField(
@@ -57,7 +57,7 @@ class Squirrel(models.model):
 
     Ground_Plane='Ground Plane'
     Above_Ground='Above Ground'
-    LOCATION_CHOICES(
+    LOCATION_CHOICES=(
             (Ground_Plane,'Ground_Plane'),
             (Above_Ground,'Above_Ground'),
             )
@@ -99,4 +99,7 @@ class Squirrel(models.model):
     Indifferent=models.BooleanField()
 
     Runs_form=models.BooleanField()
+
+    def __str__(self):
+        return self.Squirrel_ID
 # Create your models here.
