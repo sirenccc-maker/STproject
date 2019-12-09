@@ -1,0 +1,14 @@
+#os generated files#
+Thumbs.db
+.DS_Store
+._*
+
+
+#pycaches#
+*/__pycache__
+*.pyc
+
+#Django#
+*.log
+db.sqlite3
+
