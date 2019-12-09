@@ -17,9 +17,9 @@ from django.contrib import admin
 from ST import views
 from django.urls import include,path
 urlpatterns = [
+    path('sightings/',include('ST.urls')),
     path('admin/', admin.site.urls),
     path('map/', views.show_map),
-    path('sightings/',include('ST.urls')),
 ]
 
 
