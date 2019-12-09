@@ -3,7 +3,7 @@ from .forms import SquirrelForm
 from django.http import HttpResponse
 from .models import Squirrel
 from django.shortcuts import redirect
-
+11
 def all_squirrel(request):
     squirrels=Squirrel.objects.all()
     context={
