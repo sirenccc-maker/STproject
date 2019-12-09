@@ -98,7 +98,7 @@ class Squirrel(models.Model):
 
     Indifferent=models.BooleanField()
 
-    Runs_form=models.BooleanField()
+    Runs_from=models.BooleanField()
 
     def __str__(self):
         return self.Squirrel_ID
