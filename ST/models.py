@@ -6,7 +6,7 @@ class Squirrel(models.Model):
     Latitude=models.FloatField(
             help_text=_('Latitude of sighting'),
             )
-    Longtitude=models.FloatField(
+    Longitude=models.FloatField(
             help_text=_('Longtitude of sighting'),
             ) 
     Squirrel_ID=models.CharField(

@@ -14,7 +14,7 @@ class Command(BaseCommand):
                 item['Date']=item['Date'][-4:]+'-'+item['Date'][0:2]+'-'+item['Date'][-6:-4]
                 s=Squirrel(
                         Latitude=item['Y'],
-                        Longtitude=item['X'],
+                        Longitude=item['X'],
                         Squirrel_ID=item['Unique Squirrel ID'],
                         shift=item['Shift'],
                         Date=item['Date'],
