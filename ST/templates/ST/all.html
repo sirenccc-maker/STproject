@@ -1,1 +1,5 @@
 <ul>
+	{% for squirrel in squirrels %}
+	<li><a href="sightings/{{squirrel.Squirrel_ID}}">{{squirrel.Squirrel_ID}}</a></li>
+	{% endfor %}
+</ul>
