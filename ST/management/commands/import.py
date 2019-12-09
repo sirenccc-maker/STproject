@@ -35,7 +35,7 @@ class Command(BaseCommand):
                         Tail_twitches=(item['Tail twitches']=='true'),
                         Approaches=(item['Approaches']=='true'),
                         Indifferent=(item['Indifferent']=='true'),
-                        Runs_form=(item['Runs from']=='true'),
+                        Runs_from=(item['Runs from']=='true'),
                         )
                 s.save()
 
